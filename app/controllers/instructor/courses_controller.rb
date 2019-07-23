@@ -4,7 +4,7 @@ class Instructor::CoursesController < ApplicationController
   def new
     @course = Course.new
   end
-end
+
 
 
 def create
