@@ -5,7 +5,8 @@ class CoursesController < ApplicationController
 
   def show
     @course = Course.find(params[:id])
-    @course.images.create(course_params)
+       @course.image.create(course_params)
+ 
   end
 
   private
