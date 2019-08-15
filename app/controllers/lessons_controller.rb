@@ -12,9 +12,13 @@ private
 
 
 def require_enrolled_in_current_course
-  if current_user != enrolled_in?(current_course)
+  if current_user.enrolled_in?(current_lesson.section.course)
+
+  else
+
     redirect_to course_path(current_course), alert: 'Error Message Here'
   end
+end
 
 
 helper_method :current_lesson
@@ -24,4 +28,3 @@ end
 
 end
 
-end
