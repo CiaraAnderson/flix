@@ -26,5 +26,10 @@ def current_lesson
   @current_lesson ||= Lesson.find(params[:id])
 end
 
+helper_method :current_course
+def current_course
+  @current_course ||= Course.find(params[:id])
+end
+
 end
 
